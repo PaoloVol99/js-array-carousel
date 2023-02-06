@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel img {
+    width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
+	object-position: center;
+}
+
+menu,
+ul,
+ol {
+    list-style: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide {
+    display: none;
+}
+
+.wrapper {
+    padding-top: 50px;
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 30px;
+}
+
+.arrow-right {
+    right: 30px;
+}
