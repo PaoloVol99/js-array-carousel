@@ -23,7 +23,7 @@ arrowWrapper.innerHTML = arrowsElements
 
 let slideElements
 
-for (let i = 0; i < slidesList.length - 1; i++) {
+for (let i = 0; i < slidesList.length; i++) {
     const slide = document.createElement("li")
     slide.classList.add('slide')
     carousel.appendChild(slide)
