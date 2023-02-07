@@ -23,7 +23,7 @@ arrowWrapper.innerHTML = arrowsElements
 
 let slideElements
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < slidesList.length - 1; i++) {
     const slide = document.createElement("li")
     slide.classList.add('slide')
     carousel.appendChild(slide)
@@ -46,17 +46,14 @@ arrowRight.addEventListener('click', function() {
     
     if (activeSlideIndex < slideElements.length - 1) {
         currentSlide.classList.remove('active')
-    
         nextSlide.classList.add('active')
         activeSlideIndex++
-        console.log(carousel)
     } else {
         activeSlideIndex -= slideElements.length 
         currentSlide.classList.remove('active')
         nextSlide = slideElements[activeSlideIndex + 1]
         nextSlide.classList.add('active')
         activeSlideIndex++
-        console.log(carousel)
     }
 
 })
@@ -73,12 +70,9 @@ arrowLeft.addEventListener('click', function() {
         activeSlideIndex -= 1
     } else {
         activeSlideIndex += slideElements.length 
-        console.log(currentSlide)
         currentSlide.classList.remove('active')
         nextSlide = slideElements[activeSlideIndex - 1]
         nextSlide.classList.add('active')
         activeSlideIndex -= 1
-        console.log(carousel)
-
-}
+    }
 })
